@@ -1,17 +1,17 @@
 {
   "allowedPaths": [
-    "frontend/package-lock.json",
-    "frontend/package.json"
+    "t62-fixture/package-lock.json",
+    "t62-fixture/package.json"
   ],
-  "baseSha": "bc9056586dbc9a656c66e5ac4fbc117e37989966",
+  "baseSha": "0be827b10ed84243b3acb90c5424fb452982aff0",
   "conflictDomain": {
     "ecosystem": "npm",
-    "id": "d147bff0bfd35332",
+    "id": "e09305b14f9aaaf6",
     "lockArtifacts": [
-      "frontend/package-lock.json"
+      "t62-fixture/package-lock.json"
     ],
     "proofClass": "LOCK_EXACT",
-    "rootManifest": "frontend/package-lock.json"
+    "rootManifest": "t62-fixture/package-lock.json"
   },
   "limits": {
     "maxChangedFiles": 10,
@@ -27,9 +27,10 @@
     "marketplace/plugins/common",
     "plugins",
     "plugins/packages/googlesheetsv2",
-    "server"
+    "server",
+    "t62-fixture"
   ],
-  "remediationKey": "1b46937957797102f43e1a1ac3da74822b955697259d9f1f1af395532b77752f",
+  "remediationKey": "4b2b479af56f13bf6660a5e9a42e846687a306e4cea4b18c8c5c9ec5f408616b",
   "repository": "https://github.com/gregkroon/ToolJet",
   "rules": {
     "lockfileTextPatchForbidden": true,
@@ -38,26 +39,26 @@
     "securityControlModificationForbidden": true,
     "testModificationForbidden": true
   },
-  "scanSha": "bc9056586dbc9a656c66e5ac4fbc117e37989966",
+  "scanSha": "0be827b10ed84243b3acb90c5424fb452982aff0",
   "schema": "harness.remediation/contract.v1",
-  "stoExecutionId": "mFhSUeABTKC0HA2PkLLsvA",
+  "stoExecutionId": "u38uL_SkSa2SarzwfYZbkw",
   "stoTargetId": "PLL-gMBBE8y8FqvfVKOobE",
-  "targetBranch": "main",
+  "targetBranch": "t62/form-data-fixture-base",
   "units": [
     {
       "candidateVersions": [
-        "3.8.4"
+        "4.0.6"
       ],
       "coordinate": {
-        "normalisedName": "immutable",
-        "purl": "pkg:npm/immutable@3.8.3"
+        "normalisedName": "form-data",
+        "purl": "pkg:npm/form-data@4.0.5"
       },
-      "fromVersion": "3.8.3",
+      "fromVersion": "4.0.5",
       "issueIds": [
-        "CDppPCOnN3uPra0UyFIS_x"
+        "qW-9gMwTYtzIltk3JvjyS7"
       ],
-      "minimumFixedVersion": "3.8.4",
-      "package": "immutable"
+      "minimumFixedVersion": "4.0.6",
+      "package": "form-data"
     }
   ]
 }
