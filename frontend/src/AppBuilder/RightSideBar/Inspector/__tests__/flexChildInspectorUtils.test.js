@@ -1,6 +1,9 @@
-jest.mock('../Components/FlexChildLayoutPanel', () => ({
+jest.mock('../Components/FlexContainer/FlexChildLayoutPanel', () => ({
   FlexChildLayoutPanel: () => null,
 }));
+
+// Accordion ordering does not need application services reached by the helper module.
+jest.mock('@/_helpers/utils', () => ({ resolveReferences: (value) => value }));
 
 import { injectFlexChildWidthBeforeAdditionalActions } from '../Components/FlexContainer/flexChildInspectorUtils';
 import { ADDITIONAL_ACTIONS_ACCORDION_ID } from '../inspectorConstants';

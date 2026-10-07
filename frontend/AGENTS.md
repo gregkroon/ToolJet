@@ -37,6 +37,14 @@ React + Webpack. Edition composition (webpack aliases, registries, `fetchEdition
 - Tabler Icons (`@tabler/icons-react`) or Lucide React (`lucide-react`) only — do not add new icon packages
 - Static assets live in `frontend/assets/images/`
 
+## Jest test tooling
+
+- Custom transformers must return an object containing `code`, as required by the locked Jest 29 runner. SVG imports use `frontend/__mocks__/svg.js`; `svgTransformer.test.js` exercises the configured transform.
+- Mock the actual module path. Flex child inspector helpers import `Components/FlexContainer/FlexChildLayoutPanel`; a mock at the old `Components/FlexChildLayoutPanel` path cannot intercept it.
+- Stylesheets are mapped to the inert `__mocks__/style.js` module for unit tests; production webpack still compiles actual styles. Query variable extraction lives in `AppBuilder/_utils/queryPanel`, while `appUtils` exposes the current storage/date/color/state helpers. Do not resurrect removed legacy helper exports for stale tests.
+- Keep brace-expansion overrides qualified by the minimatch version: minimatch 10 imports the brace-expansion 5 `expand` API, so an unqualified v2 override breaks ESLint before linting begins.
+- Run the complete frontend suite after a test-tooling repair; do not exclude suites or use an empty-test success flag.
+
 ## App Builder architecture
 
 ### Backward compatibility (CRITICAL)
