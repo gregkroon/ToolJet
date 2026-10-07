@@ -165,7 +165,7 @@
     "url-join": "^5.0.0",
     "use-react-router-breadcrumbs": "^4.0.1",
     "util": "^0.12.5",
-    "uuid": "9.0.0",
+    "uuid": "^11.1.1",
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
     "y-websocket": "^1.4.5",
     "yjs": "^13.5.46",
@@ -244,7 +244,8 @@
       "node_modules/(?!(react|mpx-error-boundary)/)"
     ],
     "moduleNameMapper": {
-      "@/(.*)": "\u003crootDir\u003e/src/$1"
+      "@/(.*)": "\u003crootDir\u003e/src/$1",
+      "\\.(css|scss|sass|less)$": "\u003crootDir\u003e/__mocks__/style.js"
     },
     "testEnvironment": "jest-environment-jsdom",
     "moduleDirectories": [
@@ -368,8 +369,8 @@
     "micromatch": {
       "picomatch": "2.3.2"
     },
-    "minimatch": {
-      "brace-expansion": "2.1.7"
+    "minimatch@10": {
+      "brace-expansion": "5.0.12"
     },
     "minimatch@3": {
       "brace-expansion": "2.1.7"
